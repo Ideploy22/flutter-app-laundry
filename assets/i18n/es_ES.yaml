@@ -1,0 +1,81 @@
+common:
+  cancel: Cancelar
+  delete: Excluir
+  back: Voltar
+  continue: Prosseguir
+splash:
+  title: Honest PDV
+home:
+  offers: Ofertas
+  start: Toque aqui para iniciar\nsuas compras
+  scan: Escanei o código\nde barras do produto
+failures:
+  serverMessages:
+    unknown: Algo deu errado com sua requisição
+    user_not_found: Usuário não encontrado
+    not_authorized: Terminal não autorizado
+    client_not_authorized: Terminal não autorizado
+  auth: Erro ao acessar o sistema
+  products:
+    download: Erro ao realizar download dos produtos
+    get: Erro ao consultar produto... :(
+login:
+  button: Prosseguir
+  email: E-mail
+  password: Senha
+  loading: Estamos validando as credenciais do PDV...
+cart:
+  header: Carrinho
+  remove: Excluir Itens
+  finish: Finalizar Compra
+  cancel: Cancelar Compra
+  reader:
+    idle: Para adicionar mais um produto, passe o código de barras no scanner
+    loading: Processando
+    done: Item Adicionado
+    quantity: E informe a quantidade
+  totalizer: Total
+  items:
+    header:
+      item: Item
+      unitValue: Und. (R$)
+      quantity: Qtd.
+      total: Total (R$)
+  clearDialog:
+      title: Tem certeza que deseja cancelar a compra?
+      subtitle: Isso limpara seu carrinho de compras definitivamente!
+      abort: Continuar comprando
+      clear: Cancelar compra
+  deleteDialog:
+    title: Selecione o item que deseja excluir
+    scan: Ou escaneie o código de barras do produto que deseja excluir
+    confirm:
+      title: Confirma a exclusão do item?
+      quantity: Informe a quantidade
+passwordDialog:
+  title: Informe a senha de acesso
+  button: Prosseguir
+  wrongPassword: Senha incorreta
+configuration:
+  title: Configurações do sistema
+  syncProducts: Sincronizar lista de produtos
+  syncPos: Dispositivos POS
+payment:
+  title: Pagamento
+  remaining: Pagamento Valor Restante
+  select: Selecione uma forma de pagamento
+  remain: Total Restante
+  paymentType:
+    pix: PIX
+    creditCard: Cartão de Crédito
+    debitCard: Cartão de Débito
+  footer:
+    title: Efetue o pagamento total ou insira um valor desejado.
+    subtitle: Case não efetue o pagamento total, você poderá realizar, ainda, um outro pagamento com o valor restante.
+    editPayment: Informe o valor a ser pago com
+discovery:
+  empty: Nenum dispositivo POS encontrado ...
+  error: Erro ao buscar dispositivos próximos...
+  start: Inicie uma busca por dispositivos próximos. Certifique-se de que a maquininha está ligada e carregada e que o modo de pareamento está ativado. (normalmente essa função é ativada pressionando a tecla 0 do equipamento)
+  startSearch: BUSCAR
+  stopSearch: PARAR BUSCA

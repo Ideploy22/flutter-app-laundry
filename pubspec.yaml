@@ -1,0 +1,55 @@
+name: app_laundry
+description: Software bistro - app-laundry
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+
+  flutter_plugin_pos_integration:
+    git:
+      url: git@github.com:Ideploy22/flutter-plugin-pos.git
+      ref: main
+  ideploy_package:
+    git:
+      url: git@github.com:Ideploy22/flutter-lib-common-packages.git
+      ref: main
+  
+  kiosk_mode: 0.4.0
+
+dev_dependencies:
+  build_runner: ^2.3.3
+  dart_code_metrics: ^5.7.0
+  flutter_lints: ^2.0.1
+
+  flutter_test:
+    sdk: flutter
+
+  injectable_generator: ^2.1.5
+  json_serializable: ^6.6.1
+  mobx_codegen: ^2.1.1
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/i18n/
+    - assets/images/
+    - assets/animations/
+
+  fonts:
+    - family: iDeploy
+      fonts:
+        - asset: assets/fonts/i_deploy/iDeploy.ttf
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/inter.ttf
