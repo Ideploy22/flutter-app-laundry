@@ -94,8 +94,6 @@ class _LoginScreenState extends State<LoginScreen> with I18nTranslateMixin {
       password: _pwdController.text,
       onSuccess: (UserEntity user) async {
         _appController.setUser(user);
-        //final FlutterPluginPosIntegration _posPlugin = getIt<FlutterPluginPosIntegration>();
-        //await _posPlugin.initialize();
         Navigator.of(context)
             .pushReplacementNamed(NamedRoutes.homeScreen.route)
             .ignore();
