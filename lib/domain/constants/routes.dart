@@ -1,7 +1,8 @@
 enum NamedRoutes {
   splashScreen('/'),
   loginScreen('/login'),
-  homeScreen('/home');
+  homeScreen('/home'),
+  configurationScreen('/configuration');
 
   final String route;
 
