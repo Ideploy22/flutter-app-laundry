@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:app_laundry/domain/constants/routes.dart';
+import 'package:app_laundry/domain/theme/theme_mapping.dart';
 import 'package:app_laundry/domain/theme/themes.dart';
 import 'package:app_laundry/presentation/app/app_routes.dart';
 import 'package:app_laundry/presentation/app/controller/app_controller.dart';
@@ -22,7 +23,7 @@ class AppWidget extends StatefulWidget {
 class _AppWidgetState extends State<AppWidget> {
   final GlobalKey<ScaffoldMessengerState> _scaffoldMessengerState =
       GlobalKey<ScaffoldMessengerState>();
-  final AppController appController = getIt<AppController>();
+  final AppController _appController = getIt<AppController>();
   final StreamController<Failure?> streamError =
       StreamController<Failure?>.broadcast();
   final StreamController<AppMessage> streamMessage =
@@ -49,6 +50,9 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return Observer(builder: (BuildContext context) {
+      final ThemeData _theme = Themes().availableThemes[
+          _appController.user?.theme ?? AvailableThemesEnum.defaultTheme]!;
+
       return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           _initializeAppGlobal(constraints);
@@ -61,7 +65,7 @@ class _AppWidgetState extends State<AppWidget> {
                 title: 'iDeploy - Honest PDV',
                 scaffoldMessengerKey: _scaffoldMessengerState,
                 debugShowCheckedModeBanner: false,
-                theme: Themes().defaultTheme,
+                theme: _theme,
                 initialRoute: NamedRoutes.splashScreen.route,
                 routes: appRoutes,
               ),
