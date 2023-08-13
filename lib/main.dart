@@ -34,7 +34,10 @@ void main() async {
   });
 
   await SystemChrome.setPreferredOrientations(
-    <DeviceOrientation>[DeviceOrientation.landscapeLeft],
+    <DeviceOrientation>[
+      //DeviceOrientation.portraitUp,
+      DeviceOrientation.landscapeLeft,
+    ],
   ).then((_) {
     runZoned(
       () {

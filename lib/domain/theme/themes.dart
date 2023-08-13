@@ -22,6 +22,11 @@ class Themes {
       brightness: Brightness.light,
     ),
     textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 38,
+        fontWeight: FontWeight.w700,
+        color: AppColors.primaryColor,
+      ),
       displayLarge: TextStyle(
         fontSize: 28,
         fontWeight: FontWeight.w700,
@@ -37,13 +42,23 @@ class Themes {
         fontWeight: FontWeight.w700,
         color: AppColors.primaryColor,
       ),
+      headlineLarge: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.w300,
+        color: AppColors.text,
+      ),
       headlineMedium: TextStyle(
+        fontSize: 18,
+        fontWeight: FontWeight.w300,
+        color: AppColors.text,
+      ),
+      headlineSmall: TextStyle(
         fontSize: 14,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w300,
         color: AppColors.text,
       ),
       labelLarge: TextStyle(
-        fontSize: 16,
+        fontSize: 26,
         fontWeight: FontWeight.w600,
         color: AppColors.contrast,
       ),

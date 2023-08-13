@@ -28,7 +28,7 @@ class FilledActionButton extends StatelessWidget {
       color: Colors.transparent,
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(ThemeConstants.dialogBorderRadius),
+        borderRadius: BorderRadius.circular(ThemeConstants.borderRadius),
         child: Ink(
           padding: const EdgeInsets.symmetric(
             vertical: ThemeConstants.padding + ThemeConstants.minPadding,
@@ -58,12 +58,15 @@ class FilledActionButton extends StatelessWidget {
                 ),
                 const SpacerHorizontal.half(),
               ],
-              Text(
-                label,
-                style: Theme.of(context)
-                    .textTheme
-                    .labelLarge
-                    ?.copyWith(color: color),
+              Padding(
+                padding: const EdgeInsets.all(ThemeConstants.doublePadding),
+                child: Text(
+                  label,
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge
+                      ?.copyWith(color: color),
+                ),
               ),
             ],
           ),
