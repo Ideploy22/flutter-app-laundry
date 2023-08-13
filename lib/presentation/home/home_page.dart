@@ -18,6 +18,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarDefaultWidget(
+        isHome: true,
         leading: Observer(
           builder: (BuildContext context) {
             return ChangeLanguageWidget(appController: appController);

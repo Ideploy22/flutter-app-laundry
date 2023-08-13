@@ -1,6 +1,5 @@
-import 'package:app_laundry/domain/constants/globals.dart';
-import 'package:app_laundry/domain/constants/routes.dart';
 import 'package:app_laundry/domain/theme/theme_constants.dart';
+import 'package:app_laundry/presentation/common/appbar/widget/logo_widget.dart';
 import 'package:flutter/material.dart';
 
 class AppBarDefaultWidget extends StatelessWidget
@@ -25,15 +24,8 @@ class AppBarDefaultWidget extends StatelessWidget
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Expanded(
-              child: leading ?? const SizedBox.shrink(),
-            ),
-            Expanded(
-              child: GestureDetector(
-                onLongPress: () => _goToConfiguration(context),
-                child: Image.asset(GlobalsConstants.assetsLogo),
-              ),
-            ),
+            Expanded(child: leading ?? const SizedBox.shrink()),
+            Expanded(child: LogoWidget(isHome: isHome)),
             Expanded(
               child: Align(
                 alignment: Alignment.centerRight,
@@ -44,10 +36,6 @@ class AppBarDefaultWidget extends StatelessWidget
         ),
       ),
     );
-  }
-
-  void _goToConfiguration(BuildContext context) {
-    Navigator.pushNamed(context, NamedRoutes.configurationScreen.route);
   }
 
   @override
