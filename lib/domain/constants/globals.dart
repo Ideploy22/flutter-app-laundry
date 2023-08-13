@@ -1,6 +1,6 @@
 class GlobalsConstants {
   static const String assetsLogo = 'assets/images/logo.png';
-  static const String assetsBarCode = 'assets/images/barcode.png';
+  static const String washingMachine = 'assets/images/washingMachine.png';
 }
 
 class StorageKeys {

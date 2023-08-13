@@ -31,21 +31,40 @@ class ConfigurationScreen extends StatelessWidget with I18nTranslateMixin {
               textAlign: TextAlign.center,
             ),
             const SpacerVertical.double(),
+            const SpacerVertical.double(),
             FilledActionButton(
-              label: translate('syncProducts'),
-              onTap: () => _teste(),
+              label: translate('syncPosOrTef'),
+              onTap: () {},
               color: Theme.of(context).colorScheme.surface,
               fillColor: Theme.of(context).colorScheme.primary,
-              icon: IDeployIcons.syncProduct,
+              icon: IDeployIcons.pos,
               fullWidth: false,
             ),
             const SpacerVertical.double(),
             FilledActionButton(
-              label: translate('syncPos'),
-              onTap: () => _teste(),
+              label: translate('priceItems'),
+              onTap: () {},
               color: Theme.of(context).colorScheme.surface,
               fillColor: Theme.of(context).colorScheme.primary,
-              icon: IDeployIcons.pos,
+              icon: IDeployIcons.dollar,
+              fullWidth: false,
+            ),
+            const SpacerVertical.double(),
+            FilledActionButton(
+              label: translate('washingMachine'),
+              onTap: () {},
+              color: Theme.of(context).colorScheme.surface,
+              fillColor: Theme.of(context).colorScheme.primary,
+              icon: IDeployIcons.edit,
+              fullWidth: false,
+            ),
+            const SpacerVertical.double(),
+            FilledActionButton(
+              label: translate('dryerMachine'),
+              onTap: () {},
+              color: Theme.of(context).colorScheme.surface,
+              fillColor: Theme.of(context).colorScheme.primary,
+              icon: IDeployIcons.edit,
               fullWidth: false,
             ),
           ],
@@ -57,9 +76,5 @@ class ConfigurationScreen extends StatelessWidget with I18nTranslateMixin {
   void _close(BuildContext context) {
     Navigator.of(context).popUntil((Route<dynamic> route) =>
         route.settings.name == NamedRoutes.homeScreen.route);
-  }
-
-  void _teste() {
-    print('teste');
   }
 }

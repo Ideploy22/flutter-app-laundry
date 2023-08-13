@@ -1,6 +1,7 @@
 import 'package:app_laundry/presentation/app/controller/app_controller.dart';
 import 'package:app_laundry/presentation/common/appbar/appbar_default_widget.dart';
 import 'package:app_laundry/presentation/home/widgets/change_language_widget.dart';
+import 'package:app_laundry/presentation/home/widgets/idle_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:ideploy_package/di/injectable.dart';
 import 'package:ideploy_package/ideploy_package.dart';
@@ -14,10 +15,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final AppController appController = getIt<AppController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarDefaultWidget(
+        isHome: true,
         leading: Observer(
           builder: (BuildContext context) {
             return ChangeLanguageWidget(appController: appController);
@@ -25,10 +28,7 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: const Icon(Icons.ac_unit),
       ),
+      body: const IdleHomeWidget(),
     );
-  }
-
-  void changeLangue() {
-    return;
   }
 }

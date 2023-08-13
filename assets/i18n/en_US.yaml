@@ -21,3 +21,13 @@ login:
   email: E-mail
   password: Senha
   loading: Estamos validando as credenciais do PDV...
+passwordDialog:
+  title: Informe a senha de acesso
+  button: Prosseguir
+  wrongPassword: Senha incorreta
+configuration:
+  title: Configurações do sistema
+  syncPosOrTef: Dispositivos POS ou TEF
+  washingMachine: Configurações da maquina de lavar
+  dryerMachine: Configurações da maquina de secar
+  priceItems: Configurações preço dos itens
